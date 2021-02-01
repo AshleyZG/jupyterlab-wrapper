@@ -2,7 +2,7 @@
 
 ![Github Actions Status](https://github.com/my_name/myextension/workflows/Build/badge.svg)
 
-A JupyterLab extension.
+A JupyterLab extension for JupyterLab 2.0.0.
 
 
 ## Requirements
