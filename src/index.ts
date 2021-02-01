@@ -22,8 +22,6 @@ const extension: JupyterFrontEndPlugin<void> = {
     app: JupyterFrontEnd,
     palette: ICommandPalette,
     mainMenu: IMainMenu,
-    // panel: NotebookPanel,
-    // nt: INotebookTools,
     tracker: INotebookTracker
   ) => {
     let buttonExtension = new RunAllCellsButtonExtension();
@@ -31,8 +29,6 @@ const extension: JupyterFrontEndPlugin<void> = {
 
     const { commands, shell } = app;
     const command = 'widgets:open-tab';
-    // debugger;
-    // console.log(panel);
     console.log(tracker);
     commands.addCommand(command, {
       label: 'Open a Tab Widget',
@@ -65,7 +61,7 @@ class ExampleWidget extends Panel {
     let tbl = document.createElement('table');
     tbl.className = 'hey-tbl';
     tbl.style.width  = '100%';
-    // tbl.createTHead()
+
     let headRow = tbl.createTHead().insertRow();
     let cell = headRow.insertCell(0);
     cell.title = 'Name';
@@ -105,11 +101,6 @@ class ExampleWidget extends Panel {
     btn2.innerHTML = 'Set';
     btn2.onclick = ()=> {
       console.log('hello');
-      // console.log(app);
-      // console.log(panel);
-      // console.log(nt);
-      // console.log(tracker);
-      // debugger;
     };
     this.node.appendChild(btn2);
 
